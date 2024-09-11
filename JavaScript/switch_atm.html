@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Service</title>
+</head>
+
+<body>
+  <h1>ATM Task by using Switch Case</h1>
+
+
+  <script>
+    let pinNum = 1234
+    let pin = Number(prompt("Enter pin Number:"))
+    switch (pin) {
+      case pinNum:
+        document.write("Welcome to ATM Dashboard")
+        alert("Welcome to ATM Dashboard")
+        let transactions = Number(prompt(`Choose the transcations: \n 1.Fast Cash \n 2.Withdraw \n 3.Deposit \n 4.Balance Enquiry`))
+        switch (transactions) {
+          case 1:
+            let fast = Number(prompt(`Choose a number: \n 1. Rs.1000 \n 2. 2000 \n 3.5000 \n 4.10000`))
+            switch (fast) {
+              case 1:
+                alert("You have withdrawn Rs.1000")
+                break
+
+              case 2:
+                alert("You have withdrawn Rs.2000")
+                break
+
+              case 3:
+                alert("You have withdrawn Rs.5000")
+                break
+
+              case 4:
+                alert("You have withdrawn Rs.10000")
+                break
+
+              default:
+                alert("You have entered invalid number")
+                break
+            }
+            break
+
+          case 2:
+            let withdraw = Number(prompt(`Enter the amount to be withdrawn: `))
+            alert(`Your withdrawn amount is ${withdraw}`)
+            break
+
+          case 3:
+            let deposit = Number(prompt(`Enter the amount to be deposited: `))
+            alert(`Your deposited amount is ${deposit}`)
+            break
+
+          case 4:
+            let balance = 50000
+            alert(`Your total  account balance is ${balance}`)
+            break
+
+        }
+
+        break
+
+      default:
+        alert("Invalid pin number")
+        break
+
+    }
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

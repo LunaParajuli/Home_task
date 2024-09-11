@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Machine</title>
+</head>
+
+<body>
+  <h1>Task1: ATM Machine</h1>
+
+  <script>
+    let totalBalance = 10000
+    let pinNum = 1234;
+
+
+    let num = Number(prompt("Enter your pin number:"))
+    if (pinNum == num) {
+
+      let transactions = Number(prompt("Choose the Transactions: \n 1.Withdraw \n 2.Deposit \n 3.Balance"))
+
+      if (transactions == 1) {
+        let balance = Number(prompt("Enter the withdrawal amount: "))
+
+        if (balance > totalBalance) {
+          alert("You do not have sufficient balance")
+        }
+        else {
+          let remainNum = totalBalance - balance
+          alert(`Your money has been withdrawn and your remaining balance is: ${remainNum}`)
+        }
+      }
+      else if (transactions == 2) {
+        let balance = Number(prompt("Enter the deposited amount: "))
+        let addedNum = totalBalance + balance
+        alert(`Your money has been deposited and your total balance is:  ${addedNum}`)
+      }
+      else if (transactions == 3) {
+        alert(`Your total balance is: ${totalBalance}`)
+      }
+      else {
+        alert("Enter valid number")
+      }
+
+    }
+    else {
+      alert("Your pin number is incorrect.")
+    }
+  </script>
+  
+</body>
+
+</html>
